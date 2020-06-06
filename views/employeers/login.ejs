@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <%- include('../partials/head.ejs') %>
+</head>
+<body>
+
+    <%- include('../partials/nav.ejs') %>
+ <h1 class="title" style="text-align: center; padding-top: 2%;">
+    <img src="https://image.flaticon.com/icons/svg/876/876204.svg" style="max-width: 32px;max-height: 32px;">Create Account - Sign-in</h1> 
+  <div class="tabs is-centered">
+    <ul>
+      <li ><a href="/employeers/signup">New to JobHunts?</a></li>
+      <li class="is-active"><a href="/employeers/login">Existing User?</a ></li>
+    </ul>
+  </div>
+  <div class="container" style="padding-top: 1%;padding-bottom: 10%;">
+  
+  
+    <div class="columns is-mobile">
+        <div class="column is-half is-offset-one-quarter">
+            <h1 class="title" style="text-align: center;">Sign In With JobHunts Account</h1>
+            <div class="field">
+                <label class="label">Email</label>
+
+                <input class="input" type="email" placeholder="Email">
+        
+              </div>
+              <div class="field">
+                <label class="label">Password</label>
+
+                 <input class="input" type="password" placeholder="Password">
+           
+          
+              </div>
+              <a href="/">Forgot Password?</a>
+              <button class="button is-fullwidth is-primary is-outlined">Login</button>
+              <p>Doesn't have a JobHunts account?</p>
+              <div class="buttons">
+                <button class="button is-primary">Sign Up</button>
+              </div>
+
+        </div>
+      
+      </div>
+
+
+
+</div>
+
+<%- include('../partials/footer.ejs') %>
+</body>
+</html>

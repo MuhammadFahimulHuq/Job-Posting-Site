@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <%- include('../partials/head.ejs') %>
+</head>
+<body>
+
+  <%- include('../partials/nav.ejs') %>
+ <h1 class="title" style="text-align: center; padding-top: 2%;"><img src="https://image.flaticon.com/icons/svg/876/876204.svg" style="max-width: 32px;max-height: 32px;">Create Account - Sign-in</h1> 
+  <div class="tabs is-centered">
+    <ul>
+      <li class="is-active"><a href="/employeers/signup">New to JobHunts?</a></li>
+      <li><a href="/employeers/login">Existing User?</a ></li>
+    </ul>
+  </div>
+  <div class="container" style="padding-top: 1%;padding-bottom: 10%;">
+  
+    <div class="columns is-mobile">
+        <div class="column is-half is-offset-one-quarter">
+          
+                <h4 class="title">Create Account</h4>
+                <p>Create a free JobHunts account to manage your jobs, view candidates, and more</p>
+                <div class="columns">
+                    <div class="column">
+                        <label class="label">Email</label>
+                 <input class="input" type="text" >
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="column">
+                        <label class="label">Password</label>
+                 <input class="input" type="text" >
+                    </div>
+                </div>
+             
+
+           
+                <div class="columns">
+                    <div class="column">
+                        <label class="label">Company phone</label>
+                 <input class="input" type="text" placeholder="880-XXXXXXXX" >
+                    </div>
+                </div>
+           
+             
+                <div class="columns">
+                    <div class="column">
+                        <label class="label">Company name</label>
+                 <input class="input" type="text" >
+                    </div>
+                </div>
+           
+          <div class="columns">
+        <div class="column">
+            <label class="label">Zip Code</label>
+            <input class="input" type="number" >
+        </div>
+        
+ 
+    <div class="column">
+        <label class="label">Choose Area</label>
+        <div class="control">
+            <div class="select">
+            <select>
+                <option>Dhaka</option>
+                <option>Barisal</option>
+                <option>Chittagong</option>
+                <option>Khulna</option>
+                <option>Mymensingh</option>
+                <option>Rajshahi</option>
+                <option>Sylhet</option>
+                <option>Rangpur</option>
+            </select>
+            </div>
+             </div>
+    </div>
+</div>
+       
+                <div class="columns">
+                    <div class="column">
+                        <label class="label">Company Address</label>
+                 <input class="input" type="text" >
+                    </div>
+                </div>
+        
+  
+<label class="checkbox">
+    <input type="checkbox">
+    I agree to the <a href="#">terms and conditions</a>
+  </label>
+            
+    <button class="button is-fullwidth is-primary ">Continue</button>
+      <a>Already have an account? Sign in</a>
+        </div>
+      
+      </div>
+
+
+
+</div>
+
+  <%- include('../partials/footer.ejs') %>
+</body>
+</html>
