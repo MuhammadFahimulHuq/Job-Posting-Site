@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <%- include('partials/head.ejs') %>
-</head>
-<body>
 
-  <%- include('partials/nav.ejs') %>
 
 <div class="container" style="padding-top: 4%;padding-bottom: 10%;">
   <h1 class="title" style="text-align: center; padding-top: 2%;"><img src="https://image.flaticon.com/icons/svg/876/876204.svg" style="max-width: 32px;max-height: 32px;">Create Account </h1> 
@@ -13,16 +6,13 @@
             <div class="column is-half is-offset-one-quarter">
                 <div class="field">
                     <h5 class="subtitle">Personal Information</h5>
-                    <% if(error){%>
-                        <div class="notification is-danger">
-                          <%= error%>
-                        </div><% } %>
-
-                  <form action="/signup/register" method="POST">
+              
+                    <%- include('partials/message.ejs') %>
+                  <form action="/signup" method="POST">
                     <div class="columns">
                       <div class="column">
                          <label class="label">First Name</label>
-                        <input name="firstName" class="input" type="text" ></div>
+                        <input name="firstName" class="input" type="text"  ></div>
                       <div class="column">
                         <label class="label">Last Name</label>
                         <input  name="lastName" class="input" type="text" >
@@ -103,6 +93,3 @@
     
     </div>
     </div>
-    <%- include('partials/footer.ejs') %>
-</body>
-</html>

@@ -1,7 +1,8 @@
 
 
 exports.show_home = (req, res, next) => {
-    res.render('home', { title: 'JobHunts' })};
+    res.render('home', { title: 'JobHunts'})
+};
 
 
 

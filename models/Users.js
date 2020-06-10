@@ -1,7 +1,9 @@
 
 const mongoose= require('mongoose');
+const Schema = mongoose.Schema;
+const role = require('./Role')
 
-const userSchema = new mongoose.Schema({
+const userSchema = new Schema({
     firstName:{
         type:String,
         required:true,
@@ -42,9 +44,12 @@ const userSchema = new mongoose.Schema({
         type:Number,
         required:true,
         min:2
-     
-
-    },
+   },
+   role:{
+       type:String,
+       required:true
+   }
 
 });
+
 module.exports=mongoose.model('User',userSchema);
