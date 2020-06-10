@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%- include('partials/head.ejs') %>
+</head>
+<body>
+
+  <%- include('partials/nav.ejs') %>
+
+
+
+  <div class="container">
+      <div class="column">
+        <nav class="breadcrumb" aria-label="breadcrumbs">
+            <ul>
+              <li><a href="#">Jobs</a></li>
+              <li class="is-active"><a href="#" aria-current="page">categoryName</a></li>
+            </ul>
+          </nav>
+          <h1 class="title">Category Name</h1>
+          <div class="card">
+              <a href="/category/categoryname/alljobs">
+                Computer Jobs
+              </a>
+              <br>
+              <a href="/category/categoryname/alljobs">
+                Computer Repairer Jobs
+              </a>
+              <br>
+              <a href="/category/categoryname/alljobs">
+                Information Security Analyst Jobs
+              </a>
+              <br>
+              <a href="/category/categoryname/alljobs">
+                Junior Software Developer Jobs
+              </a>
+              <br>
+
+          </div>
+    
+
+      </div>
+ 
+  </div>
+
+
+  <%- include('partials/footer.ejs') %>
+</body>
+</html>
+

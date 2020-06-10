@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JobHunts</title>
+    <link rel="icon" href="https://image.flaticon.com/icons/png/512/1647/1647525.png" type="image/gif" sizes="16x16">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css"/>
+</head>
+<body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <% if(LoggedIn =='') {%>
+          <a class="navbar-item" href="/">
+            <img src="https://image.flaticon.com/icons/png/512/1647/1647525.png" width="30" height="30">
+         </a>
+            <% }else{%>
+                <a class="navbar-item" href="/secured/home">
+                  <img src="https://image.flaticon.com/icons/png/512/1647/1647525.png" width="30" height="30">
+         </a>
+                <% } %>
+          
+      
+          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+      
+      
+    
+          </div>
+      
+          <div class="navbar-end">
+            <div class="navbar-item">
+                <% if(LoggedIn =='') {%>
+                    <div class="buttons">
+                        <a class="button is-primary" href="/signup">
+                          <strong>Sign up</strong>
+                        </a>
+                        <a class="button is-light" href="/login">
+                          Log in
+                        </a>
+                        <a class="button" href="/employeers/signup">
+                            For Employeers
+                          </a>
+                      </div>
+                   </div><% } else{%>
+               
+                 <div class="buttons">
+                        <a class="button" href="">
+                       <%= LoggedIn%>
+                          </a>
+                        <a class="button is-primary" href="/logout">
+                          <strong>logout</strong>
+                        </a>
+                      </div>
+                      <% } %>
+         
+            </div>
+          </div>
+        </div>
+      </nav>
+    
+    
+      <nav class="navbar is-light" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+         
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                Find Jobs
+                </a>
+        
+                <div class="navbar-dropdown">
+                  <a class="navbar-item" href="/browsejobs">
+                    Search Jobs
+                  </a>
+                  <a class="navbar-item">
+                   Advanced Search Jobs
+                  </a>
+                </div>
+              </div>
+              <div class="navbar-start">
+                <a class="navbar-item">
+                  Upload Files
+                </a>
+              </div>
+              <div class="navbar-start">
+                <a class="navbar-item">
+                  Salary Tools
+                </a>
+              </div>
+              <div class="navbar-start">
+                <a class="navbar-item">
+                  Resume Help
+                </a>
+              </div>    <div class="navbar-start">
+                <a class="navbar-item">
+                  Career Advice
+                </a>
+              </div>
+          
+          
+        </div>
+      </nav>
+
+<%- body%>
+
+<footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        <strong>FZ</strong> by <a href="https://jgthms.com">@FahimPortfolio</a>. The source code is licensed
+   
+      </p>
+    </div>
+  </footer>
+    </body>
+    </html>

@@ -13,105 +13,95 @@
             <div class="column is-half is-offset-one-quarter">
                 <div class="field">
                     <h5 class="subtitle">Personal Information</h5>
-                  
-                    <div class="columns">
-                        <div class="column">
-                            <label class="label">First Name</label>
-                     <input class="input" type="text" >
-                        </div>
-                        <div class="column">
-                            <label class="label">Last Name</label>
-                            <input class="input" type="text" >
-                        </div>
-                    </div>
-                    
-                    
-                  </div>
-                 
+                    <% if(error){%>
+                        <div class="notification is-danger">
+                          <%= error%>
+                        </div><% } %>
 
-                  <div class="field">
-                <div class="control">
-                    <div class="select">
-                    <select>
-                        <label class="label">Career Level</label>
-                        <option>Select career level</option>
-                        <option>Student(High School)</option>
-                        <option>Student(Undergrate/Graduate)</option>
-                        <option>Entry Level</option>
-                        <option>Experienced(Non-Manager)</option>
-                        <option>Manger(Manager/Supervisor of Staff)</option>
-                        <option>Executive(SVP,VP, etc)</option>
-                        <option>Senior Executive(President,CFO,etc)</option>
-                    </select>
+                  <form action="/signup/register" method="POST">
+                    <div class="columns">
+                      <div class="column">
+                         <label class="label">First Name</label>
+                        <input name="firstName" class="input" type="text" ></div>
+                      <div class="column">
+                        <label class="label">Last Name</label>
+                        <input  name="lastName" class="input" type="text" >
+                      </div>
                     </div>
-                </div>
-                  </div>
-                  <div class="field">
-                <div class="control">
-                    <div class="select">
-                    <select>
-                        <label class="label">Education level</label>
-                        <option>Select education level</option>
-                        <option>Some High School Coursework</option>
-                        <option>High School or equivalent</option>
-                        <option>Certification</option>
-                        <option>Vocantional</option>
-                        <option>Some College Coursework Completed</option>
-                        <option>Associate Degree</option>
-                        <option>Bachelor's Degree</option>
-                        <option>Master's Degree</option>
-                        <option>Doctorate</option>
-                        <option>Professional</option>
-                    </select>
-                    </div>
-                </div>
-              </div>
-              <div class="columns">
-                <div class="column">
-                    <label class="label">Email</label>
-             <input class="input" type="email" >  
-            </div>
-            <div class="column">
-                <label class="label">Zip Code</label>
-                <input class="input" type="number" >
-            </div>
-        </div>
-                
-    
-            </div>
-          
-          </div>
-          <div class="columns is-mobile">
-            <div class="column is-half is-offset-one-quarter">
-              <label class="label">Upload Resume</label>
-                 
-             
-                <div class="file">
-                    <label class="file-label">
-                      <input class="file-input" type="file" name="resume">
-                      <span class="file-cta">
-                        <span class="file-icon">
-                          <i class="fas fa-upload"></i>
-                        </span>
-                        <span class="file-label">
-                          Choose Resume file…
-                        </span>
-                      </span>
-                    </label>
-                  </div>
-                </div>
-                </div>
-                <div class="columns is-mobile">
-                  <div class="column is-half is-offset-one-quarter">
-                <label class="checkbox">
-                  <input type="checkbox">
-                  I agree to the <a href="#">terms and conditions</a>
-                </label>
-                <button class="button is-fullwidth is-primary ">Continue</button>
+                   
+                       <label class="label">Email</label>
+                       <input name="email" class="input" type="email"  >  
+                       <div class="columns">
+                         <div class="column">
+                          <label class="label">Password</label>
+                          <input name="password" class="input" type="password"  >  
+                         </div>
+                         <div class="column is-one-quarter">
+                          <label class="label">Zip Code</label>
+                          <input  name="zipCode" class="input" type="number" >
+                         </div>
+                       </div>
+                       <div class="columns">
+                        <div class="column">
+                          <label class="label">Career Level</label>
+                          <select name="careerLevel">
+                           
+                           <option>Select career level</option>
+                           <option>Student(High School)</option>
+                           <option>Student(Undergrate/Graduate)</option>
+                           <option>Entry Level</option>
+                           <option>Experienced(Non-Manager)</option>
+                           <option>Manger(Manager/Supervisor of Staff)</option>
+                           <option>Executive(SVP,VP, etc)</option>
+                           <option>Senior Executive(President,CFO,etc)</option>
+                          </select>
+                          </div>
+                          <div class="column">
+                            <label class="label">Education level</label>
+                            <select name="educationLevel">
+                        
+                              <option>Select education level</option>
+                              <option>Some High School Coursework</option>
+                              <option>High School or equivalent</option>
+                              <option>Certification</option>
+                              <option>Vocantional</option>
+                              <option>Some College Coursework Completed</option>
+                              <option>Associate Degree</option>
+                              <option>Bachelor's Degree</option>
+                              <option>Master's Degree</option>
+                              <option>Doctorate</option>
+                              <option>Professional</option>
+                          </select>
+                          </div>
+                          </div>
+                          <div class="file">
+                            <label class="file-label">
+                              <input class="file-input" type="file" name="resume">
+                              <span class="file-cta">
+                                <span class="file-icon">
+                                  <i class="fas fa-upload"></i>
+                                </span>
+                                <span class="file-label">
+                                  Choose Resume file…
+                                </span>
+                              </span>
+                            </label>
+                          </div>
+                      
+
+                          <label class="checkbox">
+                            <input type="checkbox">
+                            I agree to the <a href="#">terms and conditions</a>
+                          </label>
+                      
+                      <button class="button is-fullwidth is-primary " type="submit">Continue</button>
+                      </form>
+                  
                 <a href="/login">Already have an account? Sign in</a>
                   </div> 
                 </div>        
     
+    </div>
     </div>
     <%- include('partials/footer.ejs') %>
 </body>

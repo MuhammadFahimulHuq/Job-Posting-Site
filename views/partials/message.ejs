@@ -1,0 +1,34 @@
+<% if(errors !='') {%>
+    <div class="notification is-danger">
+      <button class="delete"></button>
+       <%= errors.message%>
+    </div><% } %>
+    <% if(success_msg !='') {%>
+      <div class="notification is-success">
+        <button class="delete"></button>
+         <%= success_msg%>
+      </div><% } %>
+      <% if(error_msg !='') {%>
+        <div class="notification is-warning">
+          <button class="delete"></button>
+           <%= error_msg%>
+        </div><% } %>
+        <% if(error !='') {%>
+          <div class="notification is-danger">
+            <button class="delete"></button>
+             <%= error%>
+          </div><% } %>
+          
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+  (document.querySelectorAll('.notification .delete') || []).forEach(($delete) => {
+    $notification = $delete.parentNode;
+
+    $delete.addEventListener('click', () => {
+      $notification.parentNode.removeChild($notification);
+    });
+  });
+});
+</script>

@@ -3,11 +3,14 @@
 exports.show_home = (req, res, next) => {
     res.render('home', { title: 'JobHunts' })};
 
-exports.show_login=(req,res,next) =>{
-    res.render('login',{ title: 'JobHunts' });
 
+
+exports.show_browseJobs=(req,res,next)=>{
+    res.render('browsejobs');
 }
-exports.show_signup=(req,res,next) =>{
-    res.render('signup',{ title: 'JobHunts' });
-
+exports.show_browseJobsByCategory=(req,res,next)=>{
+    res.render('browseBycategory')
+}
+exports.show_categoryJobs=(req,res,next)=>{
+    res.render('categoryJobs')
 }
